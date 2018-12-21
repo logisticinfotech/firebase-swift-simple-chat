@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ProfileVC-->
+        <scene sceneID="WQB-DS-1pp">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" id="szF-yE-f8L" customClass="ProfileVC" customModule="messagingapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ej-iN-qne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-l8-Fdw">
+                                <rect key="frame" x="16" y="61" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="b5S-uS-cAv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-nr-Ofj">
+                                <rect key="frame" x="0.0" y="134" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="P9b-E5-330"/>
+                                    <constraint firstAttribute="width" constant="375" id="dRF-AV-EX7"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProfileCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="2UH-6W-Mfu" customClass="ProfileCell" customModule="messagingapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2UH-6W-Mfu" id="Hje-ba-vgg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FJh-7X-jYN">
+                                                    <rect key="frame" x="15" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="ktB-4L-SUe"/>
+                                                        <constraint firstAttribute="width" constant="30" id="xnF-dT-1pY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-7D-Ddf">
+                                                    <rect key="frame" x="53" y="14" width="307" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1zc-7D-Ddf" firstAttribute="trailing" secondItem="Hje-ba-vgg" secondAttribute="trailingMargin" id="3fg-j2-gAV"/>
+                                                <constraint firstItem="1zc-7D-Ddf" firstAttribute="leading" secondItem="FJh-7X-jYN" secondAttribute="trailing" constant="8" id="CjS-Uv-S8w"/>
+                                                <constraint firstItem="FJh-7X-jYN" firstAttribute="leading" secondItem="Hje-ba-vgg" secondAttribute="leading" constant="15" id="NQX-cX-h9M"/>
+                                                <constraint firstAttribute="bottom" secondItem="FJh-7X-jYN" secondAttribute="bottom" constant="11.5" id="aU7-y5-5v7"/>
+                                                <constraint firstItem="1zc-7D-Ddf" firstAttribute="top" secondItem="Hje-ba-vgg" secondAttribute="topMargin" constant="3" id="eW7-mE-F3k"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1zc-7D-Ddf" secondAttribute="bottom" constant="5" id="nva-Kb-yAA"/>
+                                                <constraint firstItem="FJh-7X-jYN" firstAttribute="top" secondItem="Hje-ba-vgg" secondAttribute="top" constant="10" id="xaT-RK-OO3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgMenu" destination="FJh-7X-jYN" id="Nlo-V5-bgJ"/>
+                                            <outlet property="lblSideMenu" destination="1zc-7D-Ddf" id="cLa-E3-hiM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="szF-yE-f8L" id="Cus-7k-rvV"/>
+                                    <outlet property="delegate" destination="szF-yE-f8L" id="syX-Dn-tCE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wcI-l8-Fdw" firstAttribute="top" secondItem="uBo-b1-59y" secondAttribute="top" constant="41" id="1AE-ER-iv7"/>
+                            <constraint firstItem="3PR-nr-Ofj" firstAttribute="trailing" secondItem="uBo-b1-59y" secondAttribute="trailing" id="76W-pM-hKL"/>
+                            <constraint firstItem="wcI-l8-Fdw" firstAttribute="centerX" secondItem="5Ej-iN-qne" secondAttribute="centerX" id="LBM-fR-oWn"/>
+                            <constraint firstItem="wcI-l8-Fdw" firstAttribute="leading" secondItem="uBo-b1-59y" secondAttribute="leading" constant="16" id="Sro-mM-sru"/>
+                            <constraint firstItem="uBo-b1-59y" firstAttribute="trailing" secondItem="wcI-l8-Fdw" secondAttribute="trailing" constant="16" id="fIv-hu-pPm"/>
+                            <constraint firstItem="3PR-nr-Ofj" firstAttribute="leading" secondItem="uBo-b1-59y" secondAttribute="leading" id="iZD-ja-d6B"/>
+                            <constraint firstItem="3PR-nr-Ofj" firstAttribute="top" secondItem="wcI-l8-Fdw" secondAttribute="bottom" constant="36" id="op5-Ky-g3U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBo-b1-59y"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblSideMenu" destination="3PR-nr-Ofj" id="RRW-hE-1VR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9E-VA-tql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1671.2" y="-911.69415292353835"/>
+        </scene>
+    </scenes>
+</document>
