@@ -11,7 +11,7 @@ import Firebase
 
 class ProfileVC : UIViewController{
     
-    var items  = ["Home","Contact","Chat", "Groups", "Profile", "Logout"]
+    var items  = ["Home","Contact","Chat", "Profile", "Logout"]
    
     var arrImg = [UIImage(named: "Home"),UIImage(named: "Contact"), UIImage(named: "Chat"), UIImage(named: "Group"), UIImage(named: "Profile"), UIImage(named: "Logout")]
     
@@ -69,15 +69,15 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
             appDelegate.objSideMenu.centerViewController = navMain
             appDelegate.showSideMenu()
         }
+//        else if indexPath.row == 3
+//        {
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            let navMain = objGroupSB.instantiateViewController(withIdentifier: "navGroup") as! UINavigationController
+//            appDelegate.objSideMenu.centerViewController = navMain
+//            appDelegate.showSideMenu()
+//
+//        }
         else if indexPath.row == 3
-        {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let navMain = objGroupSB.instantiateViewController(withIdentifier: "navGroup") as! UINavigationController
-            appDelegate.objSideMenu.centerViewController = navMain
-            appDelegate.showSideMenu()
-           
-        }
-        else if indexPath.row == 4
         {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let navMain = objProfileDetailSB.instantiateViewController(withIdentifier: "navDetail") as! UINavigationController
@@ -85,7 +85,7 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
             appDelegate.objSideMenu.centerViewController = navMain
             appDelegate.showSideMenu()
         }
-        else if indexPath.row == 5 {
+        else if indexPath.row == 4 {
             try! Auth.auth().signOut()
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.logOutSuccess()
