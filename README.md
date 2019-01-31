@@ -1,3 +1,7 @@
+<p align="left">
+  <a href="https://www.logisticinfotech.com/blog/real-time-chat-application-with-firebase/"<><img src="https://img.shields.io/badge/license-MIT-orange.svg"></a>
+</p>
+
 # firebase-swift-simple-chat
 ![alt text](firechat.gif)
 
